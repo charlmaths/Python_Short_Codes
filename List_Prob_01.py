@@ -5,12 +5,15 @@
 lst = [1, 0, 3, 5, 6, 8]
 print(lst)
 
-for item in lst:
-    if item == 0:
-        lst.remove(item)
-        lst.append(item)
+new_list = lst
+i = 0
+while i < len(new_list):
+    if new_list[i] == 0:
+        new_list.remove(new_list[i])
+        new_list.append(0)
+    i = i + 1
 
-print(lst)
+print(new_list)
 
 
 
