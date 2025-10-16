@@ -7,7 +7,7 @@ s,i,m,o,n,nil
 # String variable
 string_var = "simon"
 
-def strgen(val):
+def strgen_1(val):
     for i in range(len(val)):
         if i < len(val) - 1:
             print(val[i], end=", ")
@@ -15,5 +15,16 @@ def strgen(val):
             print(val[i], end=", ")
     print("nil", end="\n")
 
-strgen(string_var)
+strgen_1(string_var)
 
+def strgen_2(val):
+    for char in val:
+        if val[char] == 0:
+            print(val)
+        elif char < len(val) - 1:
+            print(val[char], end=", ")
+        else:
+            print(val[char], end=" ")
+    print("nil", end="\n")
+
+strgen_2(string_var)
